@@ -1,0 +1,10 @@
+*.vs
+/bin
+/obj
+/Properties
+*.config
+*.Designer.cs
+*.resx
+*.csproj
+*.sln
+
