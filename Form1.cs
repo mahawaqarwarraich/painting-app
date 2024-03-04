@@ -30,6 +30,7 @@ namespace PaintPrac
         Color FillColor = Color.Transparent;
         bool IsDrawing = false;
         List<Shape> Shapes = new List<Shape>();
+        Triangle triangle;
        
         Point TriangleVertex1;
         Point TriangleVertex2;
@@ -39,6 +40,8 @@ namespace PaintPrac
         Point RightTriangleVertex1;
         Point RightTriangleVertex2;
         Point RightTriangleVertex3;
+
+
 
 
         public Form1()
@@ -117,11 +120,13 @@ namespace PaintPrac
                         line.Draw(e.Graphics);
                         break;
                     case SELECTEDTOOL.TRIANGLE:
-                       Triangle triangle = new Triangle(TriangleVertex1, TriangleVertex2, TriangleVertex3, OutlineSize, OutlineColor, FillColor);
+                       triangle = new Triangle(TriangleVertex1, TriangleVertex2, TriangleVertex3, OutlineSize, OutlineColor, FillColor);
                         triangle.Draw(e.Graphics);
  ;
                         break;
                     case SELECTEDTOOL.RIGHTTRIANGLE:
+                        triangle = new Triangle(TriangleVertex1, TriangleVertex2, TriangleVertex3, OutlineSize, OutlineColor, FillColor);
+                        triangle.Draw(e.Graphics);
                         break;
                     case SELECTEDTOOL.PENTAGON:
                         break;
@@ -168,7 +173,10 @@ namespace PaintPrac
 
                    
                 case SELECTEDTOOL.RIGHTTRIANGLE:
+                    triangle = new Triangle(TriangleVertex1, TriangleVertex2, TriangleVertex3, OutlineSize, OutlineColor, FillColor);
+                    Shapes.Add(triangle);
                     break;
+                    
                 case SELECTEDTOOL.PENTAGON:
                     break;
                 case SELECTEDTOOL.SELECT:
@@ -273,9 +281,9 @@ namespace PaintPrac
 
                         break;
                     case SELECTEDTOOL.RIGHTTRIANGLE:
-                        RightTriangleVertex1 = new Point(X1, Y1);
-                        RightTriangleVertex2 = new Point(X1, Y2);
-                        RightTriangleVertex3 = new Point(X2, Y2);
+                        TriangleVertex1 = new Point(X1, Y1);
+                        TriangleVertex2 = new Point(X1, Y2);
+                        TriangleVertex3 = new Point(X2, Y2);
                        
                         break;
                     case SELECTEDTOOL.PENTAGON:
