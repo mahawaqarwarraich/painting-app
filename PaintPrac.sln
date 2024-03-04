@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintPrac", "PaintPrac.csproj", "{08E74BB0-E0F4-4793-9D35-0627E0AF30D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08E74BB0-E0F4-4793-9D35-0627E0AF30D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E74BB0-E0F4-4793-9D35-0627E0AF30D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E74BB0-E0F4-4793-9D35-0627E0AF30D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E74BB0-E0F4-4793-9D35-0627E0AF30D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {791A32C5-8084-4AE7-8FE6-B7D06E955600}
+	EndGlobalSection
+EndGlobal

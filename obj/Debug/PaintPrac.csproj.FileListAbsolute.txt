@@ -1,0 +1,10 @@
+C:\Users\PMLS\Desktop\PaintPrac\bin\Debug\PaintPrac.exe.config
+C:\Users\PMLS\Desktop\PaintPrac\bin\Debug\PaintPrac.exe
+C:\Users\PMLS\Desktop\PaintPrac\bin\Debug\PaintPrac.pdb
+C:\Users\PMLS\Desktop\PaintPrac\obj\Debug\PaintPrac.csproj.AssemblyReference.cache
+C:\Users\PMLS\Desktop\PaintPrac\obj\Debug\PaintPrac.Form1.resources
+C:\Users\PMLS\Desktop\PaintPrac\obj\Debug\PaintPrac.Properties.Resources.resources
+C:\Users\PMLS\Desktop\PaintPrac\obj\Debug\PaintPrac.csproj.GenerateResource.cache
+C:\Users\PMLS\Desktop\PaintPrac\obj\Debug\PaintPrac.csproj.CoreCompileInputs.cache
+C:\Users\PMLS\Desktop\PaintPrac\obj\Debug\PaintPrac.exe
+C:\Users\PMLS\Desktop\PaintPrac\obj\Debug\PaintPrac.pdb
