@@ -46,7 +46,7 @@ namespace PaintPrac
         public override void Fill(Graphics g)
         {
             SolidBrush brush = new SolidBrush(FillColor);
-
+            g.FillEllipse(brush, X1, Y1, HDiameter, VDiameter);
         }
     }
 }
