@@ -31,15 +31,21 @@ namespace PaintPrac
         bool IsDrawing = false;
         List<Shape> Shapes = new List<Shape>();
         Triangle triangle;
+        Pentagon pentagon;
        
         Point TriangleVertex1;
         Point TriangleVertex2;
         Point TriangleVertex3;
+        Point TriangleVertex4;
+        Point TriangleVertex5;
 
 
-        Point RightTriangleVertex1;
-        Point RightTriangleVertex2;
-        Point RightTriangleVertex3;
+
+
+
+
+
+
 
 
 
@@ -129,7 +135,10 @@ namespace PaintPrac
                         triangle.Draw(e.Graphics);
                         break;
                     case SELECTEDTOOL.PENTAGON:
+                        pentagon = new Pentagon(TriangleVertex1, TriangleVertex2, TriangleVertex3, TriangleVertex4, TriangleVertex5, OutlineSize, OutlineColor, FillColor);
+                        pentagon.Draw(e.Graphics);
                         break;
+                       
                     case SELECTEDTOOL.SELECT:
                         break;
                     default:
@@ -178,7 +187,10 @@ namespace PaintPrac
                     break;
                     
                 case SELECTEDTOOL.PENTAGON:
+                    pentagon = new Pentagon(TriangleVertex1, TriangleVertex2, TriangleVertex3, TriangleVertex4, TriangleVertex5, OutlineSize, OutlineColor, FillColor);
+                    Shapes.Add(pentagon);
                     break;
+                    
                 case SELECTEDTOOL.SELECT:
                     break;
                 default:
@@ -287,6 +299,38 @@ namespace PaintPrac
                        
                         break;
                     case SELECTEDTOOL.PENTAGON:
+                        double angle = -Math.PI / 2;
+                        int radius = Math.Min(Math.Abs(X2 - X1), Math.Abs(Y2 - Y1)) / 2;
+
+                        TriangleVertex1 = new Point(
+                            (int)(X1 + (X2 - X1) / 2 + radius * Math.Cos(angle)),
+                            (int)(Y1 + radius * Math.Sin(angle))
+                        );
+
+                        angle += 2 * Math.PI / 5;
+                        TriangleVertex2 = new Point(
+                           (int)(X1 + (X2 - X1) / 2 + radius * Math.Cos(angle)),
+                           (int)(Y1 + radius * Math.Sin(angle))
+                       );
+
+                        angle += 2 * Math.PI / 5;
+                        TriangleVertex3 = new Point(
+                           (int)(X1 + (X2 - X1) / 2 + radius * Math.Cos(angle)),
+                           (int)(Y1 + radius * Math.Sin(angle))
+                       );
+
+                        angle += 2 * Math.PI / 5;
+                        TriangleVertex4 = new Point(
+                           (int)(X1 + (X2 - X1) / 2 + radius * Math.Cos(angle)),
+                           (int)(Y1 + radius * Math.Sin(angle))
+                       );
+
+                        angle += 2 * Math.PI / 5;
+                        TriangleVertex5 = new Point(
+                           (int)(X1 + (X2 - X1) / 2 + radius * Math.Cos(angle)),
+                           (int)(Y1 + radius * Math.Sin(angle))
+                       );
+
                         break;
 
                 }
