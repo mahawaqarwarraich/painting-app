@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace PaintPrac
 {
-    internal abstract class Shape
+    [Serializable]
+    public abstract class Shape
     {
         public int X1;
         public int Y1;
