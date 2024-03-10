@@ -49,7 +49,11 @@
             this.pxToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.outlineColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tss = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dbDrawing = new PaintPrac.DrawingBoard();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,7 +68,7 @@
             this.fileColorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(858, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(858, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,19 +85,19 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -209,33 +213,62 @@
             // outlineColorToolStripMenuItem
             // 
             this.outlineColorToolStripMenuItem.Name = "outlineColorToolStripMenuItem";
-            this.outlineColorToolStripMenuItem.Size = new System.Drawing.Size(133, 32);
+            this.outlineColorToolStripMenuItem.Size = new System.Drawing.Size(133, 29);
             this.outlineColorToolStripMenuItem.Text = "Outline Color";
-            this.outlineColorToolStripMenuItem.Click += new System.EventHandler(this.outlineColorToolStripMenuItem_Click);
+            this.outlineColorToolStripMenuItem.Click += new System.EventHandler(this.outlineColorToolStripMenuItem_Click_1);
             // 
             // fileColorToolStripMenuItem
             // 
             this.fileColorToolStripMenuItem.Name = "fileColorToolStripMenuItem";
             this.fileColorToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
             this.fileColorToolStripMenuItem.Text = "Fill Color";
-            this.fileColorToolStripMenuItem.Click += new System.EventHandler(this.fileColorToolStripMenuItem_Click);
+            this.fileColorToolStripMenuItem.Click += new System.EventHandler(this.fileColorToolStripMenuItem_Click_1);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tss});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 489);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(858, 32);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip";
+            // 
+            // tss
+            // 
+            this.tss.Name = "tss";
+            this.tss.Size = new System.Drawing.Size(149, 25);
+            this.tss.Text = "Object Count = 0";
+            // 
+            // dbDrawing
+            // 
+            this.dbDrawing.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dbDrawing.Location = new System.Drawing.Point(0, 36);
+            this.dbDrawing.Name = "dbDrawing";
+            this.dbDrawing.OutlineSize = 2;
+            this.dbDrawing.SelectedTool = PaintPrac.SELECTEDTOOL.SELECT;
+            this.dbDrawing.Size = new System.Drawing.Size(858, 485);
+            this.dbDrawing.TabIndex = 1;
+            this.dbDrawing.UseWaitCursor = true;
+            this.dbDrawing.NotifyShapeCount += new PaintPrac.NotifyShapeCount(this.dbDrawing_NotifyShapeCount);
+            this.dbDrawing.Load += new System.EventHandler(this.dbDrawing_Load);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 521);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.dbDrawing);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,6 +297,9 @@
         private System.Windows.Forms.ToolStripMenuItem pxToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem outlineColorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileColorToolStripMenuItem;
+        private DrawingBoard dbDrawing;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tss;
     }
 }
 
